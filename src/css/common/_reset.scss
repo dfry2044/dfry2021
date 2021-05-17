@@ -1,0 +1,129 @@
+@import "./variable";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul li{
+  list-style: none;
+}
+
+#page-wrap{
+  width: 100vw;
+  position: relative;
+  transition: 0.5s;
+
+  &.ivory{
+    background-color: $ivory;
+  }
+  &.red{
+    background-color: $red;
+  }
+}
+#page-move{
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  z-index: 999999999999999999999990999998898989898;
+  overflow: hidden;
+  background-color: $red;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+.page-sub{
+  position: relative;
+  top: 0;
+  width: 100vw;
+  transition: 0.5s;
+}
+body{
+  overflow-x: hidden;
+}
+.c-scrollbar_thumb{
+  width: 0 !important;
+}

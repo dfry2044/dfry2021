@@ -1,0 +1,21 @@
+doctype html
+html(lang="ko")
+    include partials/head.pug
+    include common/mixin.pug
+    body 
+        include import/main/loading
+        #page-wrap.ivory(data-scroll-container)
+            include partials/header
+            include partials/menu
+            include import/main/intro
+            include import/main/about
+            include import/main/service
+            include import/main/works
+            include import/main/inquiry
+            include import/common/contact
+            include partials/footer
+        include partials/popup
+        include partials/pageMove
+    script
+        include partials/script.js
+    include partials/script.pug
